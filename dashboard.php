@@ -40,6 +40,7 @@ if (!isset($_SESSION["username"])) {
                 $rows = $result->fetch_all(MYSQLI_ASSOC);
 
                 if ($num_rows > 0) {
+                    $_SESSION["lot_id"] = $rows[0]["id"];
                     echo "<h2 class='text-gray-800 text-3xl font-bold heading tracking-wider underline mt-12'>Available Lot:". $rows[0]["id"] ."</h2>";
                     echo "<p class='text-gray-800 text-md font-bold heading tracking-wider mt-2'>Please Park Your Vehicle</p>";
                     echo "<a href='simulator.php' class='btn btn-primary-outline mt-24 px-6 py-2 rounded-md text-blue-600 font-semibold border border-blue-600 hover:text-white hover:bg-blue-600 focus:text-white focus:bg-blue-600'>Park</a>";

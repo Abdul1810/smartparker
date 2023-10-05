@@ -1,10 +1,25 @@
+<<<<<<< HEAD
+=======
+<?php
+session_start();
+require('includes/dbconn.php');
+if (!isset($_SESSION["lot_id"])) {
+    header("Location: index.php");
+    exit();
+}
+?>
+>>>>>>> 2ca28e9 (added database)
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Rectangle Divided into Halves and Parts</title>
+=======
+    <title>Please Park Your Vehicle</title>
+>>>>>>> 2ca28e9 (added database)
     <!-- Include the Tailwind CSS stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -58,6 +73,21 @@
             background-color: #a04242;
             color: #fff;
         }
+<<<<<<< HEAD
+=======
+
+        /* create a blinking animation in green */
+        .is-lot {
+            background-color: #42a04f;
+            color: #fff;
+            animation: blinker 2s linear infinite;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 20%;
+            }
+        }
+>>>>>>> 2ca28e9 (added database)
     </style>
 </head>
 
@@ -70,6 +100,7 @@
                     <p class="text-2xl font-semibold">1</p>
                 </div>
                 <div class="box">
+                <div class="box is-lot">
                     <p class="text-2xl font-semibold">3</p>
                 </div>
                 <div class="box">
@@ -82,7 +113,10 @@
                     <p class="text-2xl font-semibold">9</p>
                 </div>
             </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2ca28e9 (added database)
             <!-- Create the bottom half with 5 horizontal rows -->
             <div class="row">
                 <div class="box">
